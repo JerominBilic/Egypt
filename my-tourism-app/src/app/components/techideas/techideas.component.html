@@ -1,0 +1,58 @@
+<h1>Innovative Ideas</h1>
+
+<form [formGroup]="techIdeasForm">
+    <div>
+        <label for ="userName">Name</label><br>
+        <input type="text" id="userName" formControlName="name">
+    </div>
+    <span *ngIf = "nameControl.touched && nameControl.errors?.prohibited">
+        Your name cannot contain the word tourist
+    </span>
+    <span *ngIf = "nameControl.touched && nameControl.errors?.required">
+        Please insert your name
+    </span>
+    <span *ngIf = "nameControl.touched && nameControl.errors?.minlength && !nameControl.errors?.required">
+        Your name should be more than 2 letters
+    </span>
+    <br>
+    <div>
+        <label for ="userEmail">Email</label><br>
+        <input type="email" id="userEmail" formControlName="email">
+    </div>
+    <span *ngIf = "emailControl.touched && emailControl.errors?.required">
+        Please enter your email
+    </span>
+    <br>
+    <div>
+        <label for ="userAge">Age</label><br>
+        <input type="number" id="userAge" formControlName="age">
+    </div>
+    
+    <br>
+    <div>
+        <label for ="targetCity">Target City</label>
+        <select id="targetCity" formControlName="city">
+            <option value="">Select a City</option>
+            <option value={{citynames}} *ngFor = "let city of citynames">{{city}}</option>
+            </select>
+    </div>
+    <span *ngIf = "cityControl.touched && cityControl.errors?.required">
+        Please select a city
+    </span>
+    <br>
+    <div>
+        <label for="brief">Brief summary of your technical idea:</label><br>
+        <textarea rows="4" cols="50" id="brief" formControlName="brief"></textarea>
+    </div>
+    <span *ngIf = "briefControl.touched && briefControl.errors?.required">
+        Please enter summary about your project
+    </span>
+    <span *ngIf = "briefControl.touched && briefControl.errors?.minlength && !briefControl.errors?.required">
+        Your message should be more than 99 characters
+    </span>
+    <span *ngIf = "briefControl.errors?.prohibited && briefControl.touched">
+        You may not include the word 'nothing'
+    </span><br>
+    <button type="submit" (click)='onClick()' [disabled]="techIdeasForm.invalid">Submit</button>
+
+    </form>

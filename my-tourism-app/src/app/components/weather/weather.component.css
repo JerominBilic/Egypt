@@ -1,0 +1,22 @@
+.styleCities{
+    margin: 10px;
+text-decoration: none;
+border: 1px solid black;
+background: white;
+color:black;
+padding: 5px;
+font-style: italic;
+
+}
+
+div{
+    padding-top: 20px;
+    width: 13%;
+}
+
+a:hover{
+    background:#FE5F55;
+}
+#bkg{
+    background-color: #faf9ed;
+}

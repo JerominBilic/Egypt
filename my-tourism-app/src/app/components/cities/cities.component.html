@@ -1,0 +1,16 @@
+
+
+<div *ngFor = "let city of cities">
+    
+    <h4 [ngClass]="city.attractionSites.length > 2 == true ? 'green-color' : 'black-color'"> {{city.name}}</h4>
+  
+
+        <ul *ngFor="let site of city.attractionSites">
+            <li>{{site}}</li>
+        </ul>
+
+</div>
+
+
+
+

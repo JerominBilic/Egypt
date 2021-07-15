@@ -1,0 +1,26 @@
+#appName {
+    font-size: 30px;
+    color: #553739;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+div{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    padding-left: 0%;
+    
+
+}
+
+#aim{
+    font-size:20px;
+    font-weight: bold;
+    color:#553739;
+}
+
+img{
+    width: 100%;
+}

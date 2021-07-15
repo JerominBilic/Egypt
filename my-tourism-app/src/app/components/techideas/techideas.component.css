@@ -1,0 +1,48 @@
+form{
+    background-color: none;
+}
+
+div{
+    padding:10px;
+    padding-bottom: 2px;
+}
+
+label{
+font-weight: bold;
+color:#553739;
+}
+
+input{
+    margin-top: 5px;
+}
+
+textarea{
+    margin-top: 5px;
+    width: 100%;
+}
+
+select{
+    margin-left: 8px;
+}
+#bkg{
+    background-color: #faf9ed;
+}
+
+h1{
+    color:#553739;
+}
+
+button{
+    margin-top: 0px;
+    margin-left:10px;
+    margin-bottom:15px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #DBAD6A;
+}
+
+span{
+color:#c0433b;
+}
